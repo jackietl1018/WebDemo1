@@ -256,14 +256,14 @@ a{
 .footer-middle{
     position:relative;
     float:left;
-    width:580px;
+    width:560px;
     height:180px;
     margin-top:20px;
 }
 .footer-right{
     position: relative;
     float: left;
-    width: 368px;
+    width: 330px;
     height: 180px;
     margin-top: 18px;
 }
