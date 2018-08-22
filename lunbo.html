@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #box {/*设置整个图片框的外观*/
+            margin: 50px auto 0px;
+            position: relative;
+            width: 320px;
+            height: 480px;
+            background: #B6C7E5;
+            border: 10px solid #C0C0C0;
+        }
+
+        a {/*设置链接的样式*/
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            text-decoration: none;
+            width: 25px;
+            height: 25px;
+            opacity: 0.8;
+            filter: alpha(opacity:80);
+            background: #fff;
+            color: #000;
+            top: 228px;
+        }
+
+        a:hover {/*设置鼠标移动到链接上的样式*/
+            background: #FFFF00;
+            color: red;
+        }
+
+        #next {/*后一张图片按钮的样式*/
+            position: absolute;
+            right: 10px;
+        }
+
+        #prev {/*前一张图片按钮的样式*/
+            position: absolute;
+            left: 10px;
+        }
+
+        #p1 {/*顶部页码显示的样式*/
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .txt_style {/*文字的样式*/
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            font-size: 15px;
+            background: #000;
+            color: #fff;
+            opacity: 0.7;
+            filter: alpha(opacity:70);
+        }
+
+        #span1 {/*底部文字描述的样式*/
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        #img1 {/*图片的大小*/
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            //图片路径
+            var arr = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg'];
+            //和图片路径匹配的文字描述
+            var txt = ['抱熊~抱抱熊', '一起坐坐吧~', '啦~~啦~坐滑梯', '想喝水~', '嗯,喝饱了~~'];
+            var obt1 = document.getElementById("prev");//前一张图片的按钮
+            var obt2 = document.getElementById("next");//后一张图片的按钮
+            var oImg = document.getElementById("img1");//显示图片的标签
+            var oP = document.getElementById("p1");//显示张数的文字标签
+            var oSpan = document.getElementById("span1");//显示图片信息的标签
+
+            var index = 0;//定位第几张图片的变量
+
+            function funTab() {
+                oImg.src = arr[index];//给图片标签添加图片
+                oP.innerHTML = (index + 1) + "/" + arr.length;//修改上方的文字信息
+                oSpan.innerHTML = txt[index];//显示与之匹配的文字信息描述
+            }
+            funTab(); //第一次运行时 调用一次,进行初始化
+
+            obt1.onclick = prevImg;//当点击前一张按钮时,调用方法 显示前一张图片
+            obt2.onclick = nextImg;//当点击后一张按钮是,调用方法显示后一张图片
+
+            function nextImg() {
+                index++;//后一张,所以下标要增加1
+                if(index > arr.length - 1) {//如果移到到数组的最大下标
+                    index = 0;//那么下标为0 . 这样就可以循环显示图片
+                }
+                funTab();//显示图片和搭配的文字信息
+            };
+
+            function prevImg() {
+                index--;//前一张图片.所以下标要减1
+                if(index < 0) {//如果下标小于 0
+                    index = arr.length - 1;//那么下标修改为最大下标  这样就可以循环显示图片
+                }
+                funTab();//显示图片和文字信息
+            }
+            //给文档绑定一个按键事件, 来响应键盘的按键
+            document.onkeydown = function(event) {
+                //兼容主流浏览器的写法 获取按键事件
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                if(e && e.keyCode == 37) { // 按 左方向键 (37 是←方向键码值)
+                    prevImg();//这里是方法调用 ,方法名后要加括号, 立刻调用方法
+                }
+                if(e && e.keyCode == 39) { // 按 右方向键(39 是→方向键码值)
+                    nextImg();//这里是方法调用 ,方法名后要加括号, 立刻调用方法
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="box">
+    <p id="p1" class="txt_style">图片数据加载中...</p>
+    <a id="next" href="javascript:"> <b><b> <b> > </b> </b></b> </a>
+    <a id="prev" href="javascript:"><</a>
+    <span id="span1" class="txt_style">图片数量计算中...</span>
+    <img id="img1" />
+</div>
+</body>
+
+</html>

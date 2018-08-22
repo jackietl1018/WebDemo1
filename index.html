@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>华扬海纳</title>
-    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" href="http://pic.58pic.com/58pic/17/13/77/73j58PICvYk_1024.jpg" type=" image/png" />
+    <link rel="stylesheet" href="css/luara.left.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.luara.0.0.1.min.js"></script>
 </head>
 <body>
 <div id="header-1">
@@ -14,12 +18,12 @@
     </div>
 
     <div id="two">
-            <p style="line-height:4px;font-size:12px;margin-left:25px;">
-                互动营销全方位服务广告公司
-            </p>
-            <p style="line-height:4px;font-size:13px;margin-left:25px;">
-                携手腾讯 &nbsp;共赢大辽
-            </p>
+        <p style="line-height:4px;font-size:12px;margin-left:25px;">
+            互动营销全方位服务广告公司
+        </p>
+        <p style="line-height:4px;font-size:13px;margin-left:25px;">
+            携手腾讯 &nbsp;共赢大辽
+        </p>
     </div>
 
     <div id="three">
@@ -35,11 +39,11 @@
     <div id="five">
         <p style="margin:0;"><img style="margin-left:15px;" src="images/huayang.png" height="17" width="15"/>
             <span style="margin-left:7px;font-size:14px;position:absolute;margin-bottom:5px;">华扬联众</span>
-     </div>
+    </div>
 
     <div id="six" >
-            <input type="text" id="search_input" placeholder="请输入搜索词"/>
-            <input type="button " id="search_btn"/>
+        <input type="text" id="search_input" placeholder="请输入搜索词"/>
+        <input type="button " id="search_btn"/>
     </div>
 </div>
 
@@ -58,22 +62,56 @@
         </ul>
     </div>
 </div>
+<!--
 <div class="bg">
-    <img src="images/bg.png" height="422" width="100%"/>
+    <img style="display:block;" src="images/bg.png" height="422" width="100%"/>
+    <img style="display:none;" src="images/mountain.png" height="422" width="100%"/>
+    <img style="display:none;" src="images/bg.png" height="422" width="100%"/>
+    <img style="display:none;" src="images/mountain.png" height="422" width="100%"/>
+    <div id="imgyuan">
+        <div class="font"></div>
+        <div class="font"></div>
+        <div class="font"></div>
+        <div class="font"></div>
+    </div>
 </div>
+-->
+<div class="bg">
+    <ul>
+        <li><img src="images/bg.png" alt="1"/></li>
+        <li><img src="images/mountain.png" alt="2"/></li>
+        <li><img src="images/bg.png" alt="3"/></li>
+        <li><img src="images/mountain.png" alt="4"/></li>
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+<!--Luara图片切换骨架end-->
+<script>
+    $(function(){
+        <!--调用Luara示例-->
+        $(".bg").luara({width:"1382",height:"422",interval:4500,selected:"seleted",deriction:"left"});
+
+    });
+</script>
+
 <div class="container">
 
     <div class="section1">
         <div class="big1">
             <div id="big1-one">
                 <p style="display: inline;font-size: 12px;">
-                    <span style="font-size: 150%;"><strong>关于华海扬纳</strong></span>
+                    <span style="font-size: 150%;color:#444;"><strong>关于华海扬纳</strong></span>
                     <span style="text-transform: capitalize;color:#add8e6;width:100px;margin-left:10px;">About</span>
-                        <img style="margin-left:33px;margin-top:10px;"src="images/jia.png"/>
+                    <img style="margin-left:33px;margin-top:10px;"src="images/jia.png"/>
                     <a style="font-size:12px;text-decoration: none;text-transform: uppercase;"
                        href="https://www.baidu.com">read more</a>
                 </p>
-                <p style="font-size:12px;font-family: sans-serif;text-align:justify;color:black;
+                <p style="font-size:12px;font-family: sans-serif;text-align:justify;
                 line-height: 200%;margin-right:29px;">
                     <img style="float:left;" src="images/yinhao.png"/>
                     <span style="color:#999999;">
@@ -86,7 +124,7 @@
             </div>
             <div id="big1-two">
                 <p style="display: inline;font-size: 12px;margin-left:20px;">
-                    <span style="font-size: 150%;"><strong>服务优势</strong></span>
+                    <span style="font-size: 150%;color:#444;"><strong>服务优势</strong></span>
                     <span style="text-transform: capitalize;color:#add8e6;width:100px;margin-left:10px;">service</span>
                     <img style="margin-left:100px;margin-top:10px;"src="images/jia.png"/>
                     <a style="font-size:12px;text-decoration: none;text-transform: uppercase;"
@@ -96,11 +134,11 @@
                 <div style="width:335px;height:70px;margin-left:0;margin-top:20px;">
                     <img style="position:absolute;margin-left:20px;margin-top:0px;" src="images/tengxun.png"
                          height="56" width="57"/>
-                    <p style="font-size:12px;font-family: sans-serif;text-align:justify;color:black;
+                    <p style="font-size:12px;font-family: sans-serif;text-align:justify;
                 line-height: 150%;position:absolute;margin-right:23px;margin-left:88px;margin-top:0;">
 
                         <strong>腾讯广告</strong>
-                    <br/>
+                        <br/>
                         <span style="color:#999999;">
                             辽宁华扬海纳文化传媒有限公司，是由上海华扬联众与沈阳兴海纳合资成立的区域局域网...
                         </span>
@@ -114,7 +152,7 @@
 
                         <strong>微信服务</strong>
                         <br/>
-                            <span style="color:#999999;">
+                        <span style="color:#999999;">
                                 辽宁华扬海纳文化传媒有限公司，是由上海华扬联众与沈阳兴海纳合资成立的区域局域网...
                             </span>
                     </p>
@@ -138,7 +176,7 @@
 
             <div id="big1-three">
                 <p style="display: inline;font-size: 12px;margin-left:20px;">
-                    <span style="font-size: 150%;"><strong>新闻动态</strong></span>
+                    <span style="font-size: 150%;color:#444;"><strong>新闻动态</strong></span>
                     <span style="text-transform: capitalize;color:#add8e6;width:100px;margin-left:10px;">news</span>
                     <img style="margin-left:75px;margin-top:10px;"src="images/jia.png"/>
                     <a style="font-size:12px;text-decoration: none;text-transform: uppercase;"
@@ -161,11 +199,12 @@
             </div>
         </div>
     </div>
+
     <div class="section2">
         <div class="big2">
             <div class="big2-left">
                 <div class="big2-left-top">
-                    <p style="margin-top:5px;margin-left:10px;">
+                    <p style="margin-top:5px;margin-left:10px;color:#444;">
                         经典案例
                         <img style="margin-left:585px;" src="images/jia.png" height="13" width="13"/>
                         <span style="text-transform: uppercase;font-size:13px;">
@@ -190,7 +229,7 @@
                     <p style="line-height: 175%;">
                         <img src="images/word.png" height="14" width="15"/>
                         <span style="font-size:12px;color:black;">大辽网2013年广告刊例</span>
-                    <br/>
+                        <br/>
                         <img style="margin-left:20px;" src="images/search.png" height="15" width="14"/>
                         <span style="font-size:12px;color:#999999;margin-left:5px;">查看</span>
                         <img style="margin-left:10px;"src="images/download.png" height="14" width="15"/>
