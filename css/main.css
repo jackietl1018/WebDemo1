@@ -198,7 +198,7 @@ a{
 }
 .big2-left{
     float:left;
-    width:780px;
+    width:785px;
     height:100%;
 }
 .big2-left-top{
@@ -276,6 +276,34 @@ body,.bg ul,.bg li,.bg ol,.bg img{margin: 0;padding: 0;}
 li{list-style: none;}
 .bg{}
 .bg ol{position:relative;width: 120px;height:40px;top:-50px;left:630px;}
-.bg ol li{float:left;width: 15px;height: 15px;margin: 5px;background: #fff;}
-.bg ol li.seleted{background: #1AA4CA;}
+/*.bg ol li{float:left;width: 15px;height: 15px;border-radius:50%;margin: 7px;background: #fff;}*/
+
+/*出现圆圈，设置border-radius：50%即可*/
+/*.bg ol li{float:left;width: 15px;height: 15px;margin: 7px;background: #fff;}*/
+/*宽高为15px的正方形*/
+/*（由此可知，我们可以产生许多有趣的形状来作为滑动按钮，下面是自己随便尝试的几种，挺好玩的！）*/
+.bg ol li{float:left;width: 15px;height: 15px;border-radius:5px;margin: 7px;background: #fff;cursor:pointer;}
+
+.bg ol li.seleted{background: yellow;}
+
+
+.big2-left-bottom{
+    width:770px;
+    height:155px;
+    background-color: #F9F9F9;
+    border-left:1px solid #EFEFEF;
+    border-right:1px solid #EFEFEF;
+    border-bottom:1px solid #EFEFEF;
+}
+.carousel{width: 628px; height: 120px; top:20px;left:71px;margin:0; background-color: black; overflow: hidden; position: relative;}
+.carousel ul , .carousel li{height: 100%;list-style: none;}
+/*一屏放5个*/
+/*#showPage li{width: 188px; margin-right: 15px;background-color: #eee; float: left;}*/
+/*一屏放6个*/
+.carousel li{width: 88px; margin-right: 5px;background-color: #eee; float: left;}
+/*
+#setPage{width: 100%; height: 20px; text-align: center; position: absolute; left: 0; bottom: 0;}
+#setPage a{display: inline-block; width: 10px; height: 10px; margin: 0 5px; border-radius: 50%; background-color: #fff; vertical-align: middle;}
+#setPage a.setPageIn{ background-color:blue;}
+*/
 

@@ -6,8 +6,15 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" href="http://pic.58pic.com/58pic/17/13/77/73j58PICvYk_1024.jpg" type=" image/png" />
     <link rel="stylesheet" href="css/luara.left.css"/>
-    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.luara.0.0.1.min.js"></script>
+    放入对应区域变成内联一样，有效的。
+    -->
+   <!--   下面是为了一屏多图只有箭头（不带圆圈）控制轮播引入的.js
+   可是这样引入会造成两个轮播的冲突，他们不知道对应哪个.js文件
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/unslider.min.js"></script>
+    <script src="js/carousel.js"></script>-->
 </head>
 <body>
 <div id="header-1">
@@ -77,6 +84,8 @@
 </div>
 -->
 <div class="bg">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.luara.0.0.1.min.js"></script>
     <ul>
         <li><img src="images/bg.png" alt="1"/></li>
         <li><img src="images/mountain.png" alt="2"/></li>
@@ -94,7 +103,7 @@
 <script>
     $(function(){
         <!--调用Luara示例-->
-        $(".bg").luara({width:"1382",height:"422",interval:4500,selected:"seleted",deriction:"left"});
+        $(".bg").luara({width:"1382",height:"422",interval:2500,selected:"seleted",deriction:"left"});
 
     });
 </script>
@@ -213,7 +222,74 @@
                     </p>
                 </div>
                 <div class="big2-left-bottom">
-                    <img src="images/lunbo.png"/>
+                    <img src="images/lunbo.png">
+                    <!--<script src="js/jquery-1.11.1.min.js"></script>
+                    <script src="js/unslider.min.js"></script>
+                    <script src="js/carousel.js"></script>
+                    <div class="carousel">
+                        <ul>
+                            <li><img src="images/lunbo1.png" alt="" height="119" width="88"/></li>
+                            <li><img src="images/lunbo2.png" alt="" height="119" width="88"/></li>
+                            <li><img src="images/lunbo3.png" alt="" height="119" width="88"/></li>
+                            <li><img src="images/lunbo4.png" alt="" height="118" width="88"/></li>
+                            <li><img src="images/lunbo5.png" alt="" height="119" width="88"/></li>
+                            <li><img src="images/lunbo6.png" alt="" height="118" width="88"/></li>
+                            <li><img src="images/lunbo7.png" alt="" height="117" width="88"/></li>
+
+                            <li><img src="images/lunbo2.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo3.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo4.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo5.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo6.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo7.png" alt="" width="88" height="117" ></li>
+                            <li><img src="images/lunbo1.png" alt="" width="88" height="119" ></li>
+
+                            <li><img src="images/lunbo3.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo4.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo5.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo6.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo7.png" alt="" width="88" height="117" ></li>
+                            <li><img src="images/lunbo1.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo2.png" alt="" width="88" height="119" ></li>
+
+                            <li><img src="images/lunbo4.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo5.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo6.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo7.png" alt="" width="88" height="117" ></li>
+                            <li><img src="images/lunbo1.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo2.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo3.png" alt="" width="88" height="119" ></li>
+
+                            <li><img src="images/lunbo5.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo6.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo7.png" alt="" width="88" height="117" ></li>
+                            <li><img src="images/lunbo1.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo2.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo3.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo4.png" alt="" width="88" height="118" ></li>
+
+                            <li><img src="images/lunbo6.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo7.png" alt="" width="88" height="117" ></li>
+                            <li><img src="images/lunbo1.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo2.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo3.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo4.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo5.png" alt="" width="88" height="119" ></li>
+
+                            <li><img src="images/lunbo7.png" alt="" width="88" height="117" ></li>
+                            <li><img src="images/lunbo1.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo2.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo3.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo4.png" alt="" width="88" height="118" ></li>
+                            <li><img src="images/lunbo5.png" alt="" width="88" height="119" ></li>
+                            <li><img src="images/lunbo6.png" alt="" width="88" height="118" ></li>
+                        </ul>
+                        <a href="javascript:void(0);" class="unslider-arrow prev">
+                            <img class="arrow" id="al" src="images/arrowl.png" alt="prev" width="24" height="24"></a>
+
+                        <a href="javascript:void(0);" class="unslider-arrow next">
+                            <img class="arrow" id="ar" src="images/arrowr.png" alt="next" width="24" height="24"></a>
+-->
                 </div>
             </div>
             <div class="big2-right">
@@ -231,9 +307,9 @@
                         <span style="font-size:12px;color:black;">大辽网2013年广告刊例</span>
                         <br/>
                         <img style="margin-left:20px;" src="images/search.png" height="15" width="14"/>
-                        <span style="font-size:12px;color:#999999;margin-left:5px;">查看</span>
+                        <span style="font-size:12px;color:#999999;margin-left:5px;cursor:pointer;">查看</span>
                         <img style="margin-left:10px;"src="images/download.png" height="14" width="15"/>
-                        <span style="font-size:12px;color:#999999;margin-left:5px;">下载此文档</span>
+                        <span style="font-size:12px;color:#999999;margin-left:5px;cursor:pointer;">下载此文档</span>
                     </p>
                 </div>
                 <div id="download-two">
@@ -242,9 +318,9 @@
                         <span style="font-size:12px;color:black;">2013年腾讯大辽网2广告报价单</span>
                         <br/>
                         <img style="margin-left:20px;" src="images/search.png" height="15" width="14"/>
-                        <span style="font-size:12px;color:#999999;margin-left:5px;">查看</span>
+                        <span style="font-size:12px;color:#999999;margin-left:5px;cursor:pointer;">查看</span>
                         <img style="margin-left:10px;"src="images/download.png" height="14" width="15"/>
-                        <span style="font-size:12px;color:#999999;margin-left:5px;">下载此文档</span>
+                        <span style="font-size:12px;color:#999999;margin-left:5px;cursor:pointer;">下载此文档</span>
                     </p>
                 </div>
             </div>
